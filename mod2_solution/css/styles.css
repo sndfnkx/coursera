@@ -1,0 +1,66 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #e8e8e8;
+    margin: 10px;
+    position: relative;
+}
+
+.section .title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ccc;
+    padding: 5px;
+    border: 1px solid black;
+    font-size: 1.25em;
+}
+
+/* Responsive Layout */
+
+/* Desktop view - 992px and above */
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 32%; /* Make sure 3 sections fit in one row */
+    }
+}
+
+/* Tablet view - Between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        float: none;
+        width: 48%; /* Two sections on top */
+    }
+
+    .section:nth-child(3) {
+        width: 100%; /* Last section takes full row */
+    }
+}
+
+/* Mobile view - 767px and below */
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+    }
+}
